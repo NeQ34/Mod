@@ -1,0 +1,46 @@
+Zad1
+figure;
+subplot(2,2,1);
+subplot(2,2,2);
+subplot(2,2,3);
+subplot(2,2,4);
+
+Zad2
+
+subplot(2,2,1);
+x=linspace(-pi,pi,50);
+y=sin(2.*x);
+plot(x,y,'r-');
+axis([0 pi/2 0 1]);
+
+
+Zad3
+
+subplot(2,2,2);
+x=1:0.1:10;
+y=x;
+[X,Y]=meshgrid(x,y);
+Z=(X-5).^2-(Y-5).^2;
+surf(X,Y,Z);
+
+Zad4
+
+subplot(2,2,3);
+x=[200 100 50 10 20];
+etykiety={'kryminał' 'obyczajowa' 'przygodawa' 'historyczna' 'biografia'};
+pie(x,etykiety);
+
+Zad5
+
+subplot(2,2,4);
+fill([0 2 4],[0 4 0],'r');
+
+Zad6
+
+t=0:0.001:10*pi;
+a=10;
+b=4;
+x=a*cos(t);
+y=a*sin(t);
+z=b*t;
+comet3(x,y,z);
