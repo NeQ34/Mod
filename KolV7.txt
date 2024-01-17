@@ -1,0 +1,142 @@
+zad 1 podaj kod w wolfram aby zrobic wizualizacje i manipulacje dla funkcji z^2=x^n-y^m, hdzie m=3, n=2
+Manipulate[
+ ContourPlot3D[z^2 == x^n - y^m, {x, -10, 10}, {y, -10, 10}, {z, -10, 10}, 
+  ContourStyle -> Opacity[0.8], Mesh -> None, 
+  PlotLabel -> StringForm["z^2 = x^`1` - y^`2`", n, m]], 
+  {{n, 2}, 1, 10, 1}, {{m, 3}, 1, 10, 1}
+]
+
+zad2 podaj kod w wolfram aby: a) obliczyc całke funkcji BesselaJ(n=3), b) narysowac wykres funkcji bessela(n=3);  c)znalezc wartosc funkcji w punkcie x =-1/2
+(* Obliczanie całki funkcji BesselaJ(n=3) *)
+integraI = Integrate[BesselJ[3, x], x]
+
+(* Rysowanie wykresu funkcji BesselaJ(n=3) *)
+wykresI = Plot[BesselJ[3, x], {x, 0, 10}, PlotRange -> All, 
+   PlotLabel -> "BesselJ(n=3)"]
+
+(* Znalezienie wartości funkcji w punkcie x = -1/2 *)
+wartoscI = BesselJ[3, -1/2]
+
+zad3 Chyba MATLAB
+w matlab a) utwórz macierz 4 rzedy wyskokosci 6 dlugosci o liczbach kolejno od lewego gornego rogu idac do prawej: 1,2,3,4,2,1,5,6,7,8,3,1,9,10,11,12,4,3,13,14,15,16,5,2.  
+b) utworz macierz B poprzez pobranie kolumn 1-4 i 6  
+c) usun z macierzy B kolumne 5, 
+d) wyswietl elementy z macierzy b o indeksie 3,3 
+e) wyswietl 4 wiersz macierzy B, f)zsumuj elementy lezace na glownej macierzy b, 
+g)wyznacz element minimalny w kazdej z olumn macierzy B, 
+h)zapisz w wektorze b iloczyn tych elementow ktore sa wieksze od 1 i mniejsze od 10 
+i) zamien elementy  od 2 do 4 w trzecim wierszu na 0, 
+j) znajdz wartosc maksymalna ostatnich dwoch wierszy macierzy B
+
+% a) Utwórz macierz 4x6
+A = reshape([1:4, 2, 1, 5:8, 3, 1, 9:12, 4, 3, 13:16, 5, 2], 4, 6);
+
+% b) Utwórz macierz B z kolumn 1-4 i 6
+B = A(:, [1:4, 6]);
+
+% c) Usuń kolumnę 5 z macierzy B
+B(:, 5) = [];
+
+% d) Wyświetl element o indeksie (3,3) z macierzy B
+disp(B(3, 3));
+
+% e) Wyświetl 4. wiersz macierzy B
+disp(B(4, :));
+
+% f) Zsumuj elementy na głównej przekątnej macierzy B
+suma_glowna_przekatna = sum(diag(B));
+
+% g) Znajdź element minimalny w każdej kolumnie macierzy B
+min_kazda_kolumna = min(B);
+
+% h) Zapisz w wektorze b iloczyn elementów większych od 1 i mniejszych od 10
+b = B(B > 1 & B < 10);
+
+% i) Zamień elementy od 2 do 4 w trzecim wierszu na 0
+B(3, 2:4) = 0;
+
+% j) Znajdź wartość maksymalną w ostatnich dwóch wierszach macierzy B
+max_ostatnie_dwa_wiersze = max(B(end-1:end, :));
+
+zad4 w matlab: a) oblicz pochodne f' i f'' dla f=sin(3x^2+pi), 
+b)oblicz pole miedzy krzywymi y=x^2-a i y=b-x^4  gdzie a =3 i b =2    
+c) zrob wizualizacje
+% a) Obliczanie pochodnych f' i f''
+
+
+syms x a b;
+f = sin(3*x^2 + pi);
+
+% Oblicz pochodną pierwszą
+f_prime = diff(f, x);
+
+% Oblicz pochodną drugą
+f_double_prime = diff(f_prime, x);
+
+% b) Obliczanie pola między krzywymi y = x^2 - a i y = b - x^4
+a_value = 3;
+b_value = 2;
+
+% Zdefiniuj funkcje
+y1 = x^2 - a;
+y2 = b - x^4;
+
+% Oblicz miejsca przecięcia krzywych
+intersection_points = solve(y1 - y2, x);
+
+% Oblicz pole między krzywymi
+area_between_curves = abs(int(y1 - y2, x, intersection_points(1), intersection_points(2)));
+
+% c) Wizualizacja
+x_vals = linspace(-3, 3, 1000);
+y1_vals = x_vals.^2 - a_value;
+y2_vals = b_value - x_vals.^4;
+
+figure;
+
+% Krzywe funkcji
+subplot(2, 1, 1);
+plot(x_vals, y1_vals, 'r', x_vals, y2_vals, 'b');
+legend('y = x^2 - a', 'y = b - x^4');
+title('Krzywe funkcji');
+xlabel('x');
+ylabel('y');
+
+% Pole między krzywymi
+subplot(2, 1, 2);
+fill([x_vals, fliplr(x_vals)], [y1_vals, fliplr(y2_vals)], 'g');
+title('Pole między krzywymi');
+xlabel('x');
+ylabel('y');
+
+% Wyświetl
+suptitle('Wizualizacja funkcji i pola między krzywymi');
+
+zad5 zad5 zaprezentuj ruch punkt po asteroidzie zadanej w postaci parametrycznej  
+
+x=R*[cos(t)]^3 
+y= R*[sin(t)]^3  dla t od 0 do 2pi i R=4
+% Parametry asteroidy
+R = 4;
+
+% Zakres czasu
+t = linspace(0, 2*pi, 1000);
+
+% Parametry trajektorii asteroidy
+x = R * (cos(t)).^3;
+y = R * (sin(t)).^3;
+
+% Rysowanie trajektorii
+figure;
+plot(x, y, 'LineWidth', 2);
+title('Ruch punktu po asteroidzie');
+xlabel('x');
+ylabel('y');
+axis equal;
+grid on;
+
+github.com/NeQ34
+
+
+
+
