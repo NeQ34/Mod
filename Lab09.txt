@@ -1,0 +1,193 @@
+Zadanie 1:
+a)
+figure
+x = linspace(0,1,100);
+for k = [2:2:20,1:2:21]
+y = x.^k;
+plot(x,y);
+pause(0.1);
+end
+
+
+
+
+
+
+
+
+
+
+
+b)
+x = linspace(0,2*pi,100);
+for k = linspace(0,1,100)
+y = sin(x+k*2*pi);
+plot(x,y);
+pause(0.1);
+end
+
+
+
+
+
+
+
+
+
+
+
+Zadanie 3
+[X,Y] = meshgrid(-20:.5:20);
+figure('Resize','off','units','normalized','outerposition',[0 0 1 1]);
+for k = [1:-0.1:0.99,0,99:0.01:1]
+Z = cos(k*X)+cos(k*Y);
+surf(X,Y,Z);
+pause(0.1);
+end
+
+
+
+
+
+Zadanie 4:
+>> a = 2;
+>> b = 6;
+>> figure
+>> zakres = linspace(0, 2*pi, 1000);
+>> x = a * cos(zakres);
+>> y = b * sin(zakres);
+>> plot(x, y, 'LineWidth', 2);
+>> hold on
+>> point = plot(x(1), y(1), 'ro', 'MarkerSize', 10);
+>> axis equal;
+>> axis([-a a -b b]);
+>> for i = 1:length(zakres)
+    set(point, 'XData', x(i), 'YData', y(i));
+    pause(0.05);
+end
+
+
+
+
+
+
+
+
+
+
+zadanie 5:
+
+>> figure
+>> t = linspace(0, 2*pi, 1000);
+x = cos(t) + cos(7*t)/2 + sin(17*t)/3;
+>> y = sin(t) + sin(7*t)/2 + cos(17*t)/3;
+>> plot(x, y, 'LineWidth', 2);
+>> hold on
+>> point = plot(x(1), y(1), 'ro', 'MarkerSize', 10);
+>> axis equal;
+>> for i = 1:length(t)
+    set(point, 'XData', x(i), 'YData', y(i));
+    pause(0.01);
+end
+
+
+
+
+
+
+
+
+
+
+
+
+zadanie 6:
+>> a = 4;
+>> b = 9;
+>> figure
+>> t = linspace(0,20*pi,1000);
+>> x = a * t - b * sin(t);
+>> y = a - b * cos(t);
+>> plot(x,y,'LineWidth',2);
+>> hold on
+>> point = plot(x(1), y(1), 'ro', 'MarkerSize', 10);
+>> axis equal;
+>> for i = 1:length(t)
+set(point, 'XData', x(i), 'YData', y(i));
+pause(0.01);
+end
+
+
+
+
+
+
+
+
+
+Zadanie 7:
+>> a = 0.1;
+>> figure
+>> t = linspace(0,50,1000);
+>> x = a*t.*cos(t);
+>> y = a*t.*sin(t);
+>> plot(x,y,'LineWidth',2);
+>> hold on
+>> point = plot(x(1), y(1), 'ro', 'MarkerSize', 10);
+>> axis equal;
+>> for i =1:length(t)
+set(point, 'XData', x(i), 'YData', y(i));
+pause(0.01);
+end
+
+
+
+
+
+
+
+
+Zadanie 8:
+>> A = 20;
+B = 10;
+a = 10;
+b = 3;
+c = 6;
+d = 4;
+>> figure
+>> t = linspace(0,2*pi,1000);
+>> x = A*cos(a*t+b);
+>> y = B*cos(c*t+d);
+>> plot(x,y,'LineWidth',2);
+>> hold on;
+>> point = plot(x(1), y(1), 'ro', 'MarkerSize', 10);
+>> axis equal;
+>> for i = 1 : length(t)
+set(point,'XData',x(i),'YData',y(i));
+pause(0.01);
+end
+
+
+
+
+
+
+
+
+
+Zadanie 9:
+
+t = linspace(0, 2*pi, 1000);
+>>x = 5*cos(t).^2;
+>>y = 5*sin(t).*cos(t);
+>>z = 5*sin(t);
+>>figure;
+>>comet3(x, y, z);
+
+
+
+  
+
+
+
+
