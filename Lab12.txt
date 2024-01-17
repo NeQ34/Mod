@@ -1,0 +1,108 @@
+
+Zadanie 1:
+	Co oznacza zmienna x?  
+	X – zmienna niezależna
+
+	Do którego przedziału należy x 
+	x należy do przedziału [0,2]
+
+	 Wizualizacja której krzywej przedstawiona na rys. 1?
+	Przedstawiona wizualizacja to krzywa x.
+
+Zadanie 2:
+	manipulate nx+y^2
+	Narysować wykres:
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Potłumaczyć przykład (co oznaczają symbole n, x)? Do którego przedziału należy x, y? Wizualizacja której powierzchni jest narysowana 
+	
+	n - parametr
+	x – zmienna niezależna
+	x,y należy do przedziału -1,1
+	Wizualizacja powierzchni: z = 1/2+y^2
+
+Zadanie 4:
+	Mamy string “abbaabbaa”. Jakie trzeba zrobić przekształcenie, żeby otrzymać string ”XbaXbaa”? 
+		StringReplace["abbaabbaa","ab"→"Xa"]
+
+
+
+
+
+
+
+
+
+Zadanie 5:
+	Znaleźć dziedzine funkcji:
+	a) f(x)=x/(x-1)  = Wszystkie liczby poza x = 1
+	b) f(y)=tg y = Wszystkie liczby z wyłączeniem y/π + ½ 
+	c) f(z)=(1-z)^(1/2)  = Wszystkie liczby poza z<=1
+
+Zadanie 6:
+	Znaleźć zakres funkcje 
+
+	f(x)=e^(-1/4 x)  = find the range of f(x)=e^(-1/4 x)
+	
+
+	
+	f(x)=(sin x)^2  = find the range of f(x)=(sin x)^2
+
+
+
+	
+	f(y)= y/(y^2+1).  = find the range of f(y)= y/(y^2+1).
+	
+	
+
+
+Zadanie 7:
+	Obliczyć pochodną funkcji Airy’ego i narysować jej wykres. Znaleźć wartość funkcji w punkcie x=1 
+D[Airy[x-2],x]
+pochodna: d/dx(Ai(x - 2)) = Ai'(x – 2)
+
+
+
+
+
+
+
+
+
+
+
+Zadanie 8:
+	Obliczyć całką funkcji BesselaJ (n=3) i narysować jej wykres. Znaleźć wartość funkcji BesselaJ (n=3) w punkcie x=2 
+
+	integral[BesselJ[3,x],x]
+
+	
+
+
+
+
+
+
+
+
+
+
