@@ -1,0 +1,64 @@
+Zadanie 1:
+Parabola: plot(x^2)
+Hiperbola: plot(x^2/1.3^2-y^2/1^2=1)
+Koło: plot(x^2+y2=a^2)
+Elipsa: plot(x^2/1^2+y^2/3^2=1)
+Kula: plot((x-2)^2+(y-2)^2+(z-2)^2=2)
+Second butterfly curve: plot r(theta) = exp(cos(theta))-2 cos(4*theta)+sin(theta/12)^5
+Pięciokąt: plot polygon[{{0,0},{1,0},{1,1},{0.5, 1.5},{0,1}}]
+Elipsoida: plot3D x^2/2+y^2/6+z^2/4=1
+Sześcian: plot3D Cube[{1,2,3},2]
+Ostrosłup: Graphics3D[Pyramid[{{0,0,0},{2,0,0},{2,2,0},{0,2,0},{1,1,2}}]]
+walec: plot3d x^2 + y^2 = 1, {x, -1, 1}, {y, -1, 1}
+icosahedron: Graphics3D[PolyhedronData["Icosahedron"]]
+Pole wektorowe(x,-y): VectorPlot[{x, -y}, {x, -2, 2}, {y, -2, 2}]
+
+Zadanie 2:
+1.plot3D x*y^2, from x=-2 to 2, from y=-3 to 3
+
+
+
+
+
+2. plot3D x^3-y^3+1, from x = -2.5 to x = 2.5, from y=-2 to y=2
+
+
+
+
+
+
+3.plot3D {cos(a),sin(a),a/2}, from a = -2*pi to a=2*pi
+
+4.plot3D {cos(u) sin(v), sin(u) sin(v) , cos(v)}, from u = -2*pi to u=2*pi, from v = -pi to v=pi
+
+
+
+
+
+5.plot3D {4 + (3 + cos(v) ) sin(u) , 4 + (3 + cos(v)) cos(u) , 4 + sin(v)}, from u = 0 to u=2*pi, from v=0 to v=2*pi
+
+
+
+
+
+
+
+Zadanie 3:
+a) ListPlot[{1,cos[pi/12]}, {2,cos[pi/8]}, {3,cos[pi/4]}, {4,cos[pi/3]}, {5,cos[pi/2]},{6,lne^2.5},{7,arctgSqrt[3]}]
+
+
+
+
+b) ListPlot[{1/2,-1/3,1/4,-1/5,1/6,-1/7,1/8,-1/9,1/10}]
+
+
+
+
+
+c) area between y=x^4-12 and y=x^2
+
+
+
+d) x^3 + y^2 = 1, x = y^(-1)
+	x≈-0.80873060047939201374, y≈-1.2365057033914990243
+e) x^4 + y^2 < 5 and sin(y) > 10x
