@@ -1,0 +1,38 @@
+Zad1
+figure;
+subplot(2,2,1);
+subplot(2,2,2);
+subplot(2,2,3);
+subplot(2,2,4);
+
+Zad2
+
+subplot(2,2,1);
+x=linspace(-pi,2*pi,50);
+y=sin(x);
+plot(x,y,'r-');
+axis([0 pi/2 0 1]);
+
+Zad3
+
+subplot(2,2,2);
+ezplot('x*sin(x)' , [-2*pi :2*pi]);
+
+Zad4
+
+subplot(2,2,3)
+x=[200 100 50 10 20];
+etykiety={'kryminał' 'obyczajowa' 'przygodawa' 'historyczna' 'biografia'};
+pie(x,etykiety);
+
+Zad5
+
+subplot(2,2,4);
+fill([0 4 4 0],[0 0 4 4],'b');
+
+Zad6
+
+t = 0:.01:2*pi;
+x = cos(2*t).*(cos(t).^2);
+y = cos(2*t).*(cos(t).^2);
+comet(x,y);
